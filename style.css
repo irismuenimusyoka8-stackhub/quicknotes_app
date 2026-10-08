@@ -1,0 +1,127 @@
+css
+/* Box-sizing Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+footer {
+    text-align: center;
+    color: #777;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* Flexbox Form Layout */
+#note-form {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+#note-form p {
+    flex: 1;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Button & Hover Styling */
+button {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #219653;
+}
+
+/* Error message in Red */
+#error-message {
+    color: #e74c3c;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Note Cards Styling */
+.note-card {
+    list-style: none;
+    background: #fafafa;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 6px;
+    position: relative;
+}
+
+/* Visual Styles for Each Category Border */
+.category-personal { border-left: 6px solid #008080; } /* Teal */
+.category-work { border-left: 6px solid #8b0000; }     /* Dark Red */
+.category-study { border-left: 6px solid #0000ff; }    /* Blue */
+
+.note-meta {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    margin-top: 8px;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    margin-top: 10px;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive Media Query for Small Screens */
+@media (max-width: 600px) {
+    #note-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
